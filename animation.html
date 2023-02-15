@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes sliding {
+            0%{
+                background-color:rgb(60, 237, 96); 
+                left: 0;
+                top: 0;
+            }
+            25%{
+                top: 220px;
+                background-color: rgb(67, 189, 227);
+                transform: scale(0.5);
+            }
+            50%{
+                top:0;
+                background-color: rgb(245, 155, 46);
+                transform: scale(1);
+            }
+            75%{
+                top:220px;
+                background-color: rgb(217, 24, 195);
+                transform: scale(0.5);
+            }
+
+            100%{
+                background-color: blueviolet;
+                left:600px;
+                top: 0;
+            }
+        }
+        .stage{
+            width: 700px;
+            height: 300px;
+            background-color: rgb(191, 233, 233);
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(41, 152, 227);
+            border-radius: 50%;
+            animation: sliding 2s ease-in-out 0.5s infinite alternate none;
+            animation-play-state: running;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's explore Animation</h1>
+    <div class="stage">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+</html>
